@@ -16,12 +16,6 @@ execute_process(
 # Export compile database
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Link against dynamic/static dependencies
-set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build with shared libraries dependencies")
-if(NOT BUILD_SHARED_LIBS)
-  set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
-endif(NOT BUILD_SHARED_LIBS)
-
 # Address Sanitizers
 set(SANITIZE OFF CACHE BOOL "Build with sanitizers")
 if(SANITIZE)
